@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2984/2984075.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <title>Energia Renovável e Limpa</title>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1 class="hero-title">Energia Renovável e Limpa</h1>
+            <p class="hero-subtitle">Conheça as fontes de energia que estão transformando o futuro do planeta</p>
+        </div>
+    </header>
+
+    <!-- O QUE É ENERGIA LIMPA -->
+    <section id="sobre" class="section">
+        <h2 class="section-title">O que é Energia Limpa e Renovável?</h2>
+        <div class="sobre-content">
+            <p class="sobre-text">
+                Energia limpa e renovável é aquela gerada a partir de fontes naturais que se regeneram em curto prazo e
+                que não emitem gases poluentes na atmosfera. Diferente dos combustíveis fósseis (carvão, petróleo e gás
+                natural), que são finitos e altamente poluentes, as renováveis são inesgotáveis e possuem impacto
+                ambiental muito menor.
+            </p>
+            <p class="sobre-text">
+                Essas fontes incluem a luz do sol, o vento, a água dos rios, a biomassa e as ondas do mar. Utilizar
+                energia renovável é fundamental para combater as mudanças climáticas, reduzir a poluição do ar e
+                garantir um futuro sustentável para as próximas gerações.
+            </p>
+            <div class="sobre-badges">
+                <span class="badge">Inesgotável</span>
+                <span class="badge">Baixo Impacto Ambiental</span>
+                <span class="badge">Sustentável</span>
+                <span class="badge">Renovável</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIPOS DE ENERGIA -->
+    <section id="tipos" class="section section-alt">
+        <h2 class="section-title">Tipos de Energia Renovável</h2>
+        <div class="cards-grid">
+
+            <div class="card card-eolica">
+                <div class="card-icon">🌬️</div>
+                <h3>Energia Eólica</h3>
+                <p>Gerada pela força dos ventos que movem as pás de aerogeradores. É uma das fontes que mais cresce no
+                    mundo, sendo muito eficiente em regiões com ventos constantes. O Brasil possui grande potencial
+                    eólico, especialmente no Nordeste.</p>
+            </div>
+
+            <div class="card card-hidro">
+                <div class="card-icon">💧</div>
+                <h3>Energia Hidrelétrica</h3>
+                <p>Aproveita a força da água dos rios para girar turbinas e ger gerar eletricidade. É a principal fonte
+                    de energia do Brasil, respondendo por cerca de 60% da matriz elétrica. Usinas como Itaipu e Belo
+                    Monte são exemplos de grande porte.</p>
+            </div>
+
+            <div class="card card-bio">
+                <div class="card-icon">🌱</div>
+                <h3>Bioenergia</h3>
+                <p>Produzida a partir de matéria orgânica (biomassa), como resíduos agrícolas, madeira, cana-de-açúcar e
+                    até lixo urbano. O etanol brasileiro, derivado da cana-de-açúcar, é um dos exemplos mais
+                    bem-sucedidos de bioenergia no mundo.</p>
+            </div>
+
+            <div class="card card-ondas">
+                <div class="card-icon">🌊</div>
+                <h3>Energia Ondomotriz</h3>
+                <p>Obtida a partir do movimento das ondas e marés dos oceanos. Ainda é uma tecnologia em
+                    desenvolvimento, mas possui enorme potencial, já que os oceanos cobrem 70% da superfície terrestre.
+                    As marés são previsíveis, o que facilita a geração constante.</p>
+            </div>
+
+            <div class="card card-solar">
+                <div class="card-icon">☀️</div>
+                <h3>Energia Solar</h3>
+                <p>Captada pela luz e calor do sol através de painéis fotovoltaicos ou térmicos. É a fonte mais
+                    abundante do planeta e pode ser usada tanto em grandes usinas quanto em residências. O Brasil tem
+                    índices de irradiação solar entre os maiores do mundo.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CALCULADORA -->
+    <section id="calculadora" class="section">
+        <h2 class="section-title">Calculadora de Gastos de Energia</h2>
+        <p class="section-desc">Insira seus dados mensais de consumo para estimar o custo e comparar com fontes
+            renováveis.</p>
+
+        <div class="calc-wrapper">
+            <form id="calc-form" class="calc-form">
+                <div class="form-group">
+                    <label for="kwh">Consumo mensal (kWh)</label>
+                    <input type="number" id="kwh" placeholder="Ex: 200" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="tarifa">Tarifa de energia (R$/kWh)</label>
+                    <input type="number" id="tarifa" placeholder="Ex: 0.85" step="0.01" min="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="pessoas">Número de moradores</label>
+                    <input type="number" id="pessoas" placeholder="Ex: 4" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="fonte">Fonte de energia atual</label>
+                    <select id="fonte">
+                        <option value="convencional">Rede convencional (não renovável)</option>
+                        <option value="solar">Solar</option>
+                        <option value="eolica">Eólica</option>
+                        <option value="hidro">Hidrelétrica</option>
+                        <option value="bio">Bioenergia</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-calc">Calcular</button>
+            </form>
+
+            <!-- RESULTADOS -->
+            <div id="resultados" class="resultados hidden">
+                <h3>Resultados</h3>
+                <div class="result-cards">
+                    <div class="result-card">
+                        <span class="result-label">Custo Mensal</span>
+                        <span id="res-custo" class="result-value">—</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-label">Custo Anual</span>
+                        <span id="res-anual" class="result-value">—</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-label">Consumo por Pessoa</span>
+                        <span id="res-pessoa" class="result-value">—</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-label">CO₂ evitado/ano*</span>
+                        <span id="res-co2" class="result-value">—</span>
+                    </div>
+                </div>
+                <p class="result-note">*Estimativa de CO₂ evitado comparando com a matriz convencional brasileira (~0.1
+                    kg CO₂/kWh).</p>
+
+                <div class="chart-container">
+                    <canvas id="chart-comparativo"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Energia Renovável e Limpa — Site Educativo &copy; 2026</p>
+        <p>Desenvolvido por Gabriel Cherem, Noah, Kaique, Maria e Amanda</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
